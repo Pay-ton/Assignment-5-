@@ -19,26 +19,26 @@ public class BallLauncher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // This is copied and changed from the initial player script, to (hopefully) allow for
-        // launching the ball via a movement and collision script with the ball. 
-        // Launch Player
+        
 
         
        
 
         // This should allow the ball to spawn when spacebar is pressed, then have the ball launch 
         // when spacebar is released.
-        if (Input.GetButtonUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space))
         {
-            moveY = position.y *Time.deltaTime * LaunchSpeed;
+            moveY = position.y * Time.deltaTime * LaunchSpeed;
             transform.position =
-            position.x += moveY;
+            
             transform.position = position;
 
         }
         else
         {
-            //GoBackToStart 
+            //This should make it go back to start when the spacebar isn't being held. 
+            transform.position = startPosition;
+            transform.rotation = startRotation;
         }
 
 
