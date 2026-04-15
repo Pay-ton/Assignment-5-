@@ -9,6 +9,7 @@ public class BallLauncher : MonoBehaviour
     public Quaternion startRotation;
     public Vector3 endPosition;
     public Quaternion endRotation;
+    public GameObject BallLauncherSquare;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
