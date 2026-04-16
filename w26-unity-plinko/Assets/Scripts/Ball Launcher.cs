@@ -27,9 +27,7 @@ public class BallLauncher : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             moveY = position.y * Time.deltaTime * LaunchSpeed;
-            transform.position =
-            
-            transform.position = position;
+            transform.Translate(endPosition);
 
         }
         else

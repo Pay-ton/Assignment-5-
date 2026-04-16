@@ -8,11 +8,13 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        // Below is commented out because I cannot figure out how to do this. 
+
         // Move player horizontally
-        float moveX = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
-        Vector3 position = transform.position;
-        position.x += moveX;
-        transform.position = position;
+        //float moveX = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
+        //Vector3 position = transform.position;
+        //position.x += moveX;
+        //transform.position = position;
 
         // Drop disc
         if (Input.GetKeyDown(KeyCode.Space) && currentDisc == null)
