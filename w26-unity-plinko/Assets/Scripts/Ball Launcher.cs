@@ -1,23 +1,24 @@
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class BallLauncher : MonoBehaviour
 {
     public float LaunchSpeed = 20.0f;
-    float moveY;
     Vector3 position;
     public Vector3 startPosition; 
     public Quaternion startRotation;
     public Vector3 endPosition;
     public Quaternion endRotation;
     public GameObject BallLauncherSquare;
+    public GameObject Disc; 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         transform.position = startPosition;
         transform.rotation = startRotation;
-        
-    }
+         Disc = GameObject.Find("Disc"); 
+}
 
     // Update is called once per frame
     void Update()
@@ -26,11 +27,9 @@ public class BallLauncher : MonoBehaviour
         // This should allow the ball to spawn and launch when spacebar is pressed
         if (Input.GetKey(KeyCode.Space))
         {
-            moveY = Input.GetAxis("Vertical") * Time.deltaTime * LaunchSpeed;
-            position = transform.position;
-            position.y -= moveY;
-            
-            
+
+            transform.position = Vector3.Lerp(transform.position, endPosition, LaunchSpeed * Time.deltaTime); 
+            Disc.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 50000000)); 
         }
         else
         {
