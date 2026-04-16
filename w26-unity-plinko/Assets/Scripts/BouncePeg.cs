@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class BouncePeg : MonoBehaviour
 {
-    public int points = 1;
+    public int points = 50;
     public Score score;
-    
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -18,7 +17,7 @@ public class BouncePeg : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // This is to make sure that the pegs bounce.
+        // This is to make sure that the pegs bounce. (WARNING, BOUNCE PEG LACKS BOUNCE) 
         if (collision != null)
         {
             Vector2 Bounce = collision.gameObject.GetComponent<Rigidbody2D>().linearVelocity;
@@ -26,6 +25,8 @@ public class BouncePeg : MonoBehaviour
             Bounce *= 10;
 
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Bounce, ForceMode2D.Impulse);
+
+            score.AddPoints(points);
         }
     }
 
