@@ -14,7 +14,7 @@ public class BouncePeg : MonoBehaviour
         
     }
 
-
+    // This is for detecting collisions between the disc and other objects
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // This is to make sure that the pegs bounce. (WARNING, BOUNCE PEG LACKS BOUNCE) 
