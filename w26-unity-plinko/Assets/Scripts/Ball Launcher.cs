@@ -29,7 +29,7 @@ public class BallLauncher : MonoBehaviour
         {
 
             transform.position = Vector3.Lerp(transform.position, endPosition, LaunchSpeed * Time.deltaTime); 
-            Disc.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 50000000)); 
+            Disc.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 5000)); 
         }
         else
         {
@@ -38,7 +38,7 @@ public class BallLauncher : MonoBehaviour
             transform.position = startPosition;
             transform.rotation = startRotation;
         }
-
+        
 
     }
 }
