@@ -17,7 +17,6 @@ public class BallLauncher : MonoBehaviour
     {
         transform.position = startPosition;
         transform.rotation = startRotation;
-         Disc = GameObject.Find("Disc"); 
 }
 
     // Update is called once per frame
@@ -27,9 +26,11 @@ public class BallLauncher : MonoBehaviour
         // This should allow the ball to spawn and launch when spacebar is pressed
         if (Input.GetKey(KeyCode.Space))
         {
+            Disc = GameObject.Find("Disc(Clone)");
+
 
             transform.position = Vector3.Lerp(transform.position, endPosition, LaunchSpeed * Time.deltaTime); 
-            Disc.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 5000)); 
+            Disc.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 50)); 
         }
         else
         {
