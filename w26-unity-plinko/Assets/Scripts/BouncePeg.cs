@@ -23,7 +23,7 @@ public class BouncePeg : MonoBehaviour
         {
             Vector2 Bounce = collision.gameObject.GetComponent<Rigidbody2D>().linearVelocity;
             Bounce = Bounce.normalized;
-            Bounce *= 2;
+            Bounce *= 10;
 
             collision.gameObject.GetComponent<Rigidbody2D>().AddForce(Bounce, ForceMode2D.Impulse);
         }
@@ -31,12 +31,12 @@ public class BouncePeg : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
-    {
+    //void //Update()
+    //{
         // More Peg bouncing
             //if (Collision != null)
 
 
 
-    }
+    //}
 }

@@ -1,9 +1,10 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Score : MonoBehaviour
 {
-    private int totalScore = 0;
+    public int totalScore = 0;
     public TMP_Text ScoreDisplay;
 
     private void Start()
@@ -17,5 +18,11 @@ public class Score : MonoBehaviour
         totalScore += points;
         ScoreDisplay.text = $"SCORE: {totalScore}";
         //Debug.Log($"Total score: {totalScore}");
+    }
+    //This lets me reset the score when a new ball is spawned in the player script
+    public void ScoreReset()
+    {
+        totalScore = 0;
+        ScoreDisplay.text = $"SCORE: {totalScore}";
     }
 }

@@ -5,6 +5,7 @@ public class Player : MonoBehaviour
     public float speed = 5;
     public GameObject discPrefab;
     private GameObject currentDisc = null;
+    public Score score;
 
     void Update()
     {
@@ -21,6 +22,8 @@ public class Player : MonoBehaviour
         {
             // Clone prefab
             currentDisc = Instantiate(discPrefab, transform.position, Quaternion.identity);
+            score.ScoreReset();
+            
         }
     }
 }
