@@ -5,7 +5,7 @@ public class BallLauncher : MonoBehaviour
     public float LaunchSpeed = 20.0f;
     float moveY;
     Vector3 position;
-    public Vector3 startPosition;
+    public Vector3 startPosition; 
     public Quaternion startRotation;
     public Vector3 endPosition;
     public Quaternion endRotation;
@@ -16,7 +16,7 @@ public class BallLauncher : MonoBehaviour
     {
         transform.position = startPosition;
         transform.rotation = startRotation;
-
+        
     }
 
     // Update is called once per frame
@@ -26,9 +26,11 @@ public class BallLauncher : MonoBehaviour
         // This should allow the ball to spawn and launch when spacebar is pressed
         if (Input.GetKey(KeyCode.Space))
         {
-            moveY = position.y * Time.deltaTime * LaunchSpeed;
-            transform.Translate(endPosition);
-
+            moveY = Input.GetAxis("Vertical") * Time.deltaTime * LaunchSpeed;
+            position = transform.position;
+            position.y -= moveY;
+            
+            
         }
         else
         {
