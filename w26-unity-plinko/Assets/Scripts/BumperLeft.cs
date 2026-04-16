@@ -43,7 +43,7 @@ public class BumperLeft : MonoBehaviour
             if (BumperPosition.GetComponent<Collider2D>().IsTouching(Disc.GetComponent<Collider2D>()))
             {
 
-                Disc.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 350),ForceMode2D.Impulse);
+                Disc.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 250),ForceMode2D.Impulse);
             }
 
 
@@ -58,7 +58,7 @@ public class BumperLeft : MonoBehaviour
             if (BumperPosition.GetComponent<Collider2D>().IsTouching(Disc.GetComponent<Collider2D>()))
             {
 
-                Disc.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 350), ForceMode2D.Impulse);
+                Disc.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 250), ForceMode2D.Impulse);
             }
 
 
