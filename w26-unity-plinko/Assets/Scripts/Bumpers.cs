@@ -17,7 +17,7 @@ public class BumperLeft : MonoBehaviour
         startRotation = transform.rotation;
         if (flipped)
         {
-            endRotation.eulerAngles = new Vector3(0, 0, -90);
+            endRotation.eulerAngles = new Vector3(0, 0, -45);
         }
         else
         {
