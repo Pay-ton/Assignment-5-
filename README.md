@@ -18,3 +18,5 @@ A - Left Bumper
 D - Right Bumper
 
 That's it!
+
+Video link of the game being played: https://youtu.be/g2vdRCPZJoY
