@@ -66,7 +66,7 @@ public class BumperLeft : MonoBehaviour
         else
         {
 
-            //This should make it go back to start when the spacebar isn't being held. 
+            //This should make it go back to start when no inputs are given
 
             transform.rotation = Quaternion.Lerp(transform.rotation, startRotation, 90 * Time.deltaTime);
 
